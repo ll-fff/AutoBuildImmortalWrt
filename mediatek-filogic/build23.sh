@@ -67,6 +67,17 @@ PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES luci-app-openclash"
 PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
+# 1. KSMBD 核心与界面
+PACKAGES="$PACKAGES luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils"
+
+# 2. NTFS3 高速内核驱动 (必装)
+PACKAGES="$PACKAGES kmod-fs-ntfs3"
+
+# 3. 自动挂载工具 (让 U 盘插上就能自动识别)
+PACKAGES="$PACKAGES block-mount"
+
+# 4. (可选) 如果你以后还会用到 exFAT 格式 (如大容量高速 U 盘)
+PACKAGES="$PACKAGES kmod-fs-exfat"
 # 增加几个必备组件 方便用户安装iStore
 PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES script-utils"
